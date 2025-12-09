@@ -13,6 +13,12 @@ NC='\033[0m' # No Color
 # Default port
 PORT=${1:-3000}
 
+# Get the server's IP address
+SERVER_IP=$(hostname -I | awk '{print $1}')
+if [ -z "$SERVER_IP" ]; then
+    SERVER_IP="127.0.0.1"
+fi
+
 # Check if certificates exist
 if [ ! -f "certs/localhost.crt" ] || [ ! -f "certs/localhost.key" ]; then
     echo -e "${RED}✗ SSL certificates not found!${NC}"
@@ -36,7 +42,8 @@ echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 echo -e "${GREEN}✓${NC} HTTPS: ${BLUE}Enabled${NC}"
 echo -e "${GREEN}✓${NC} Port: ${BLUE}${PORT}${NC}"
-echo -e "${GREEN}✓${NC} URL: ${BLUE}https://localhost:${PORT}${NC}"
+echo -e "${GREEN}✓${NC} Local: ${BLUE}https://localhost:${PORT}${NC}"
+echo -e "${GREEN}✓${NC} Server IP: ${BLUE}https://${SERVER_IP}:${PORT}${NC}"
 echo ""
 echo -e "${YELLOW}Note:${NC} Browser may show SSL warning (self-signed certificate)"
 echo "      Click 'Advanced' and proceed - this is normal for local development"
