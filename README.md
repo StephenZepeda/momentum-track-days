@@ -85,6 +85,16 @@ PORT=5000 npm start
 
 This will start the server on `http://localhost:5000` instead of the default port 3000.
 
+### Linux/Ubuntu Quick Start
+
+Use the provided start script for easier development:
+
+```bash
+chmod +x start.sh
+./start.sh          # Starts on default port 3000
+./start.sh 5000     # Starts on custom port 5000
+```
+
 ### `npm run build`
 Creates an optimized production build in the `build/` folder.
 
