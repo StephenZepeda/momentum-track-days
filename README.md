@@ -1,4 +1,6 @@
-# Momentum Track Days
+git remote add origin https://github.com/StephenZepeda/momentum-track-days.git
+git branch -M main
+git push -u origin main# Momentum Track Days
 
 Premium track day experiences for automotive enthusiasts at California's Thunderhill Raceway.
 
@@ -57,7 +59,14 @@ cd momentum-track-days
 npm install
 ```
 
-3. Start the development server:
+3. (Optional) Configure environment variables:
+```bash
+cp .env.example .env.local
+```
+
+Then edit `.env.local` to customize the port or other settings.
+
+4. Start the development server:
 ```bash
 npm start
 ```
@@ -68,6 +77,13 @@ The app will open at `http://localhost:3000`
 
 ### `npm start`
 Runs the development server with hot reload.
+
+**Custom Port:**
+```bash
+PORT=5000 npm start
+```
+
+This will start the server on `http://localhost:5000` instead of the default port 3000.
 
 ### `npm run build`
 Creates an optimized production build in the `build/` folder.
