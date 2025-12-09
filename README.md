@@ -48,7 +48,7 @@ A modern React-based web application for Momentum Track Days, featuring:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/momentum-track-days.git
+git clone https://github.com/StephenZepeda/momentum-track-days.git
 cd momentum-track-days
 ```
 
