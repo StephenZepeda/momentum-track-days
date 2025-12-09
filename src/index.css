@@ -1014,6 +1014,7 @@ nav {
     gap: 25px;
     position: relative;
     top: auto;
+    width: 100%;
 }
 
 .contact-card {
@@ -1027,7 +1028,8 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 160px;
+    min-height: 200px;
+    height: 100%;
 }
 
 .contact-card:hover {
