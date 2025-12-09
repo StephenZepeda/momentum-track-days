@@ -95,6 +95,28 @@ chmod +x start.sh
 ./start.sh 5000     # Starts on custom port 5000
 ```
 
+### HTTPS Development (Linux/Ubuntu)
+
+To run with HTTPS enabled locally:
+
+**First time setup:**
+```bash
+chmod +x generate-certs.sh
+./generate-certs.sh     # Generate self-signed certificates
+chmod +x start-https.sh
+./start-https.sh        # Start with HTTPS
+```
+
+**Subsequent runs:**
+```bash
+./start-https.sh          # Starts on port 3000 with HTTPS
+./start-https.sh 5000     # Starts on custom port with HTTPS
+```
+
+Visit `https://localhost:3000` (accept the SSL warning for self-signed certificate)
+
+**Note:** Self-signed certificates will show a browser warning - this is normal for local development.
+
 ### `npm run build`
 Creates an optimized production build in the `build/` folder.
 

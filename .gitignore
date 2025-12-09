@@ -10,6 +10,9 @@ node_modules/
 /build
 /dist
 
+# SSL Certificates (local development only)
+/certs
+
 # Misc
 .DS_Store
 .env.local
@@ -30,4 +33,5 @@ yarn-error.log*
 
 # OS
 Thumbs.db
+
 node_modules
